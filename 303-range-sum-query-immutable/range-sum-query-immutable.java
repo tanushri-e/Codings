@@ -4,13 +4,11 @@ class NumArray {
 
     public NumArray(int[] nums) 
     {
-        prefix=new int[nums.length];
-
-        prefix[0]=nums[0];
+        prefix=nums;
 
         for(int i=1;i<prefix.length;i++)
         {
-            prefix[i]=prefix[i-1]+nums[i];
+            prefix[i]+=prefix[i-1];
         }
     }
     
